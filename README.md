@@ -1,2 +1,7 @@
-# whisper_tiktok_and_instagram
-Transcribe long audio files into text using OpenAI's Whisper. The script splits audio into smaller chunks, converts to mono, adjusts the sample rate, transcribes each part with Whisper models (tiny, base, small, medium, large), and combines all transcriptions into a single text file.
+This project allows you to transcribe long audio files into text by automatically splitting them into smaller chunks and using OpenAI's Whisper model for transcription. It can handle large audio files by dividing them into configurable chunks, converting the audio to mono, and setting the sample rate to 16 kHz, which is recommended for Whisper. Each chunk is transcribed using models such as tiny, base, small, medium, or large, and all the transcriptions are combined into a single text file.
+
+To use this project, you need Python 3.8 or higher and the libraries openai-whisper and pydub, as well as FFmpeg installed on your system. You can configure the script by editing the input path to your audio file, the output path for the transcription, the duration of each chunk in minutes, and the Whisper model you want to use. Once configured, simply run the script, which will split the audio into chunks, transcribe each chunk, and save the complete transcription into a .txt file. Temporary chunk files are automatically deleted after transcription.
+
+The medium model offers a good balance of accuracy and speed, while large provides higher accuracy but is slower. This project is ideal for transcribing lectures, meetings, podcasts, or any long audio content. The script is straightforward to use and designed to handle memory efficiently by processing audio in smaller parts.
+
+For any questions or suggestions, feel free to reach out via email at Raphaelbr1t0mp@gmail.com
